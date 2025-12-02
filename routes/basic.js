@@ -1,14 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-// GET / - базовый эндпоинт
 router.get('/', (req, res) => {
   res.status(200).json({
     message: 'OK'
   });
 });
 
-// GET /status - статус сервера
 router.get('/status', (req, res) => {
   const serverStatus = {
     status: 'running',
